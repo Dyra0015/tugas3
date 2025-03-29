@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Jenis-Jenis CSS Position</h1>
+    <h4>by Dyra</h4>
+  </header>
+
+  <main>
+    <section class="static">
+      <h2>Position: Static</h2>
+      <article>
+        <p> - Static adalah nilai default dari properti position di CSS.</p>
+          <P>- Jika suatu elemen tidak diberi position, maka secara otomatis posisinya adalah static.</P>
+          <P>- Elemen dengan position static akan mengikuti alur normal dokumen (normal flow) 
+            artinya elemen ditampilkan di tempat sesuai urutan HTML.</P>
+          <h4>CIRI-CIRI STATIC :</h4>
+          <P> · Tidak terpengaruh oleh properti top, right, bottom, atau left.
+            · Posisi elemen tidak bisa digeser pakai properti-properti di atas.</P>
+            <P>· Posisi elemen tidak bisa digeser pakai properti-properti di atas.</P>
+            <P>·Biasanya dipakai kalau memang ingin elemen mengalir normal di dalam halaman. </P>
+      </article>
+    </section>
+
+    <section class="relative">
+      <h2>Position: Relative</h2>
+      <article>
+        <p> - Relative artinya posisi elemen relatif terhadap posisi normalnya di dokumen.</p>
+        <P> - Jika top, left, right, atau bottom, maka elemen akan bergeser dari posisi aslinya,
+              tapi ruang kosong di tempat awalnya tetap ada.</P>
+        <h4>CIRI-CIRI RELATIVE :</h4>
+        <p>- Tetap mengikuti alur normal dokumen, jadi space-nya di layout tidak hilang.</p>
+        <p>- Bisa digeser pakai top, left, right, bottom.</p>
+        <p>- Sering dipakai untuk membuat patokan bagi elemen absolute di dalamnya (jadi parent-nya).</p>
+      </article>
+    </section>
+
+    <section class="container">
+      <article class="absolute">
+        <h2>Position: Absolute</h2>
+        <p> - absolute artinya elemen keluar dari alur normal dokumen (tidak mempengaruhi elemen lain).</p>
+        <P> - Elemen akan diposisikan relatif ke parent terdekat yang punya position: relative, absolute, atau fixed.</P>
+        <p> - Kalau tidak ada parent yang di-position, maka elemen absolute nempel ke <body>atau viewport.</p>
+        <h4>CIRI-CIRI ABSOLUTE :</h4>
+        <p>- Bisa dikontrol pakai top, left, right, bottom.</p>
+        <p>- Tidak meninggalkan ruang di tempat aslinya (lepas dari flow).</p>
+        <p>- Sangat cocok untuk bikin layout yang presisi atau overlay.</p>
+        
+      </article>
+    </section>
+
+    <section class="fixed">
+      <h2>Position: Fixed</h2>
+      <article>
+        <p> - fixed artinya elemen lepas total dari alur dokumen dan nempel ke layar (viewport), 
+              Posisi elemen tidak terpengaruh parent selalu mengacu ke layar, dan Saat discroll, 
+              elemen tetap diam di tempatnya, seolah-olah "mengambang".</p>
+        <h4>CIRI-CIRI FIXED :</h4>
+        <p>- Bisa pakai top, left, right, bottom. dan tidak terpengaruh parent sama sekali. 
+             Tidak meninggalkan ruang di tempat aslinya (lepas dari flow).Cocok untuk navbar yang selalu di atas, 
+             floating button, popup, banner iklan.</p>
+      </article>
+    </section>
+
+    <section class="sticky-container">
+      <article class="sticky">
+        <h2>Position: Sticky</h2>
+        <p> - Sticky adalah posisi gabungan antara relative dan fixed.</p>
+        <P> - Awalnya elemen berada di posisi normalnya, 
+              tapi akan "menempel" di posisi tertentu (misalnya di atas layar) saat halaman discroll.</P>
+        <p> - Dia hanya nempel selama masih dalam area parent-nya.</p>
+        <h4>CIRI-CIRI STICKY :</h4>
+        <p>- Bisa dikontrol pakai top, left, right, bottom (paling sering pakai top).</p>
+        <p>- Elemen tidak langsung nempel, tapi nempel saat discroll dan hanya sampai batas parent-nya habis.</p>
+        <p>- Cocok untuk bikin header section, navigasi, atau judul tabel yang tetap di atas saat scroll.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>CSS posisi pertemuan ke3</p>
+  </footer>
+
+</body>
+</html>
